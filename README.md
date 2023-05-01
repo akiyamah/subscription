@@ -70,28 +70,33 @@ python manage.py runserver
 ```
 http://localhost:8000/ へアクセス。
 
-次にJWT認証機能を使用してコーディング
 
 ## フロントエンド
+### Next.jsの実行環境 (node, npm必須)
 ```
-# Next.jsの実行環境 (node, npm必須)
 node -v
 npm -v
+```
 
-# Next.jsインストール
+### Next.jsインストール
+```
 npx create-next-app . --ser-npm
+```
 
-# 動作確認
+### 動作確認
+```
 npm run dev
 ```
-# TailwindCSS導入
+http://localhost:3000へアクセス。
+
+### TailwindCSS導入
 公式ドキュメント: https://tailwindcss.com/docs/installation
 ```
 npm install -D tailwindcss
 npx tailwindcss init
 ```
 
-# 状態管理,その他ライブラリインストール
+### 状態管理,その他ライブラリインストール
 ```
 npm install cookie 
 npm install date-fns
@@ -102,8 +107,5 @@ npm install react-redux
 npm install redux
 npm install redux-devtools-extension
 
-
-
 date-fns micro micro-micrs react-loader-spinner react-redux redux redux-devtools-extension redux-thunk stripe
-
 ```
