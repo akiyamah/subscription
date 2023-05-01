@@ -14,25 +14,17 @@
 * スタイル: TailwindCSS
 
 ### 詳細
-Next.jsはReactベースのWebアプリケーションフレームワーク。
-アプリケーションの状態管理にはReduxを使用する。
-TailwindCSSはユーティリティクラスを活用したCSSフレームワーク。
-
+Next.jsはReactベースのWebアプリケーションフレームワーク。  
+アプリケーションの状態管理にはReduxを使用する。  
+TailwindCSSはユーティリティクラスを活用したCSSフレームワーク。  
 Next.jsによるアプリケーション作成により、
-
-## 依存ライブラリ
-**Django**: 高い生産性と再利用性を目指した、Pythonの高レベルWebアプリケーションフレームワークです。MVC（Model-View-Controller）アーキテクチャを基に設計されており、データベース操作、URLルーティング、テンプレートエンジンなどの機能が統合されています。
-
-**djangorestframework**: Djangoを使って簡単にRESTful APIを構築するための強力なライブラリです。シリアライゼーション、認証、ページネーションなどの機能を提供しています。
-
-**djangorestframework-simplejwt**: Django RESTフレームワークを使用したアプリケーションでJSON Web Token（JWT）認証を実装するためのライブラリです。JWT認証の簡単な実装を可能にします。
-
 
 ## バックエンド
 * 言語: Python
 * フレームワーク: DRF (Django rest framework)
 * 認証: JWT (JSON Web Token認証)
 * DB: PostgreSQL (開発はsqlite)
+
 
 ## その他
 * 決済機能: Stripe  
@@ -59,6 +51,17 @@ pip install djangorestframework-simplejwt
 pip install PyJWT
 pip install python-dateutil 
 ```
+#### 依存ライブラリ
+**Django**:Pythonの高レベルWebアプリケーションフレームワークです。MVC（Model-View-Controller）アーキテクチャを基に設計されており、データベース操作、URLルーティング、テンプレートエンジンなどの機能が統合されています。今回はバックエンドとして使用するため、テンプレート(Controller)は使用しません。
+
+**djangorestframework**: Djangoを使って簡単にRESTful APIを構築するための強力なライブラリです。シリアライゼーション、認証、ページネーションなどの機能を提供しています。
+
+**djangorestframework-simplejwt**: Django RESTフレームワークを使用したアプリケーションでJSON Web Token（JWT）認証を実装するためのライブラリです。
+
+**PyJWT**: PythonでJSON Web Token（JWT）をエンコード、デコード、検証するためのライブラリです。JWTは認証や承認に使用されるコンパクトで安全なトークンです。
+
+**python-dateutil**: Pythonで日付と時刻を操作するための拡張ライブラリです。日付の解析、加算・減算、書式設定などの機能が提供されており、タイムゾーンのサポートも含まれています。
+
 
 ### プロジェクト作成
 ```
