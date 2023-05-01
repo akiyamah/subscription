@@ -34,15 +34,17 @@ pip install djangorestframework-simplejwt
 pip install PyJWT
 pip install python-dateutil 
 
-# Django プロジェクト作成, アプリケーション作成
+# プロジェクト作成
 python manage.py startproject mysite
+
+# アプリケーション作成
 python manage.py startapp accounts
 python manage.py startapp app
 
 # 動作確認
 python manage.py runserver
 ```
-次にJWT認証機能を使用してコーディン グ
+次にJWT認証機能を使用してコーディング
 
 ## フロントエンド
 ```
