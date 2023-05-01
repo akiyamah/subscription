@@ -68,6 +68,7 @@ python manage.py startapp app
 ```
 python manage.py runserver
 ```
+http://localhost:8000/ へアクセス。
 
 次にJWT認証機能を使用してコーディング
 
