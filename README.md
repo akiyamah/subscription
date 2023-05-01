@@ -11,13 +11,7 @@
 * 言語: javascript
 * フレームワーク: Next.js
 * アプリケーション状態管理: Redux
-* スタイル: TailwindCSS
-
-### 詳細
-Next.jsはReactベースのWebアプリケーションフレームワーク。  
-アプリケーションの状態管理にはReduxを使用する。  
-TailwindCSSはユーティリティクラスを活用したCSSフレームワーク。  
-Next.jsによるアプリケーション作成により、
+* スタイル: TailwindCSS  
 
 ## バックエンド
 * 言語: Python
@@ -25,12 +19,10 @@ Next.jsによるアプリケーション作成により、
 * 認証: JWT (JSON Web Token認証)
 * DB: PostgreSQL (開発はsqlite)
 
-
 ## その他
 * 決済機能: Stripe  
 * 自然言語処理: ChatGPT
 * OS: Linux(Ubuntu)
-
 
 # 環境構築
 ## バックエンド
@@ -61,7 +53,6 @@ pip install python-dateutil
 **PyJWT**: PythonでJSON Web Token（JWT）をエンコード、デコード、検証するためのライブラリです。JWTは認証や承認に使用されるコンパクトで安全なトークンです。
 
 **python-dateutil**: Pythonで日付と時刻を操作するための拡張ライブラリです。日付の解析、加算・減算、書式設定などの機能が提供されており、タイムゾーンのサポートも含まれています。
-
 
 ### プロジェクト作成
 ```
@@ -119,3 +110,7 @@ npm install redux-devtools-extension
 
 date-fns micro micro-micrs react-loader-spinner react-redux redux redux-devtools-extension redux-thunk stripe
 ```
+
+Next.jsはReactベースのWebアプリケーションフレームワーク。  
+アプリケーションの状態管理にはReduxを使用する。  
+TailwindCSSはユーティリティクラスを活用したCSSフレームワーク。
