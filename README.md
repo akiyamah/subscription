@@ -21,14 +21,11 @@ TailwindCSSはユーティリティクラスを活用したCSSフレームワー
 Next.jsによるアプリケーション作成により、
 
 ## 依存ライブラリ
+**Django**: 高い生産性と再利用性を目指した、Pythonの高レベルWebアプリケーションフレームワークです。MVC（Model-View-Controller）アーキテクチャを基に設計されており、データベース操作、URLルーティング、テンプレートエンジンなどの機能が統合されています。
 
-**pip**: Pythonのパッケージ管理システムで、Pythonのライブラリやツールをインストール、更新、削除するために使用されます。`pip install --upgrade pip` コマンドは、pip自体を最新バージョンにアップグレードするために使用されます。
+**djangorestframework**: Djangoを使って簡単にRESTful APIを構築するための強力なライブラリです。シリアライゼーション、認証、ページネーションなどの機能を提供しています。
 
-2. **Django**: 高い生産性と再利用性を目指した、Pythonの高レベルWebアプリケーションフレームワークです。MVC（Model-View-Controller）アーキテクチャを基に設計されており、データベース操作、URLルーティング、テンプレートエンジンなどの機能が統合されています。
-
-3. **djangorestframework**: Djangoを使って簡単にRESTful APIを構築するための強力なライブラリです。シリアライゼーション、認証、ページネーションなどの機能を提供しています。
-
-4. **djangorestframework-simplejwt**: Django RESTフレームワークを使用したアプリケーションでJSON Web Token（JWT）認証を実装するためのライブラリです。JWT認証の簡単な実装を可能にします。
+**djangorestframework-simplejwt**: Django RESTフレームワークを使用したアプリケーションでJSON Web Token（JWT）認証を実装するためのライブラリです。JWT認証の簡単な実装を可能にします。
 
 
 ## バックエンド
