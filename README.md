@@ -21,11 +21,10 @@ TailwindCSSはユーティリティクラスを活用したCSSフレームワー
 Next.jsによるアプリケーション作成により、
 
 
-
 ## バックエンド
 * 言語: Python
-* フレームワーク: Django rest framework
-* 認証: JWT
+* フレームワーク: DRF (Django rest framework)
+* 認証: JWT (JSON Web Token認証)
 * DB: PostgreSQL (開発はsqlite)
 
 ## その他
@@ -36,31 +35,40 @@ Next.jsによるアプリケーション作成により、
 
 # 環境構築
 ## バックエンド
+### 仮想環境作成
 ```
-# 仮想環境作成
 mkdir backend
 cd backend
 python -m venv venv 
 source venv/bin/activate
+```
 
-# ライブラリ インストール 
+### ライブラリ インストール 
+```
 pip install --upgrade pip 
 pip install Django 
 pip install djangorestframework
 pip install djangorestframework-simplejwt
 pip install PyJWT
 pip install python-dateutil 
+```
 
-# プロジェクト作成
+### プロジェクト作成
+```
 python manage.py startproject mysite
+```
 
-# アプリケーション作成
+### アプリケーション作成
+```
 python manage.py startapp accounts
 python manage.py startapp app
+```
 
-# 動作確認
+### 動作確認
+```
 python manage.py runserver
 ```
+
 次にJWT認証機能を使用してコーディング
 
 ## フロントエンド
