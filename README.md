@@ -1,9 +1,12 @@
 # subscription
 サブスクリプションのサービス作成
 
-
-# 技術スタック
+# 技術スタックの学習
 ## フロントエンド
+言語: javascript,
+フレームワーク: Next.js
+アプリケーション状態管理: Redux
+スタイル: TailwindCSS => ユーティリティクラスを活用したCSSフレームワーク
 
 
 ## バックエンド
@@ -11,6 +14,68 @@
 フレームワーク: Django rest framework,
 認証: JWT,
 
-## AIP
-### 決済機能
-Stripe
+## その他
+決済機能: Stripe  
+
+# 環境構築
+## バックエンド
+```
+# 仮想環境作成
+mkdir backend
+cd backend
+python -m venv venv 
+source venv/bin/activate
+
+# ライブラリ インストール 
+pip install --upgrade pip 
+pip install Django 
+pip install djangorestframework
+pip install djangorestframework-simplejwt
+pip install PyJWT
+pip install python-dateutil 
+
+# Django プロジェクト作成, アプリケーション作成
+python manage.py startproject mysite
+python manage.py startapp accounts
+python manage.py startapp app
+
+# 動作確認
+python manage.py runserver
+```
+次にJWT認証機能を使用してコーディン グ
+
+## フロントエンド
+```
+# Next.jsの実行環境 (node, npm必須)
+node -v
+npm -v
+
+# Next.jsインストール
+npx create-next-app . --ser-npm
+
+# 動作確認
+npm run dev
+```
+# TailwindCSS導入
+公式ドキュメント: https://tailwindcss.com/docs/installation
+```
+npm install -D tailwindcss
+npx tailwindcss init
+```
+
+# 状態管理,その他ライブラリインストール
+```
+npm install cookie 
+npm install date-fns
+npm install micro
+npm install micro-micrs 
+npm install react-loader-spinner
+npm install react-redux
+npm install redux
+npm install redux-devtools-extension
+
+
+
+date-fns micro micro-micrs react-loader-spinner react-redux redux redux-devtools-extension redux-thunk stripe
+
+```

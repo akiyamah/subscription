@@ -16,6 +16,7 @@ class RegisterView(APIView):
     permission_classes = (permissions.AllowAny, )
     
     def post(self, request):
+        print('############ RegisterView post sta')
         try:
             data = request.data
             print(data)
@@ -47,7 +48,7 @@ class UserView(APIView):
     permission_classes = (permissions.IsAuthenticated, )
     
     def get(self, request):
-        print('not start')
+        print('UserView start')
         try:
             user = request.user
             print(user)
