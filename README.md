@@ -1,21 +1,38 @@
 # subscription
 サブスクリプションのサービス作成
 
+# 目的
+* モダンな技術の学習
+* アプリ作成の経験
+* フロントエンド、バックエンドのAPIを使用したした疎結合アプリ開発の経験
+
 # 技術スタックの学習
 ## フロントエンド
-* 言語: javascript,
+* 言語: javascript
 * フレームワーク: Next.js
 * アプリケーション状態管理: Redux
-* スタイル: TailwindCSS => ユーティリティクラスを活用したCSSフレームワーク
+* スタイル: TailwindCSS
+
+### 詳細
+Next.jsはReactベースのWebアプリケーションフレームワーク。
+アプリケーションの状態管理にはReduxを使用する。
+TailwindCSSはユーティリティクラスを活用したCSSフレームワーク。
+
+Next.jsによるアプリケーション作成により、
+
 
 
 ## バックエンド
-言語: Python,
-フレームワーク: Django rest framework,
-認証: JWT,
+* 言語: Python
+* フレームワーク: Django rest framework
+* 認証: JWT
+* DB: PostgreSQL (開発はsqlite)
 
 ## その他
-決済機能: Stripe  
+* 決済機能: Stripe  
+* 自然言語処理: ChatGPT
+* OS: Linux(Ubuntu)
+
 
 # 環境構築
 ## バックエンド
