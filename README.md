@@ -37,8 +37,7 @@
  *　通知機能: 通知を受信できる。
 
 ## 構成
-
-![構成](https://github.com/akiyamah/subscription/tree/dev/docs/images/構成図.png "構成")
+![構成](https://github.com/akiyamah/subscription/tree/dev/docs/images/構成図.png)
 
 
 
