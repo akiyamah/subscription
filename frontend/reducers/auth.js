@@ -23,6 +23,14 @@ import {
     AUTHENTICATED_SUCCESS,
     AUTHENTICATED_FAIL,
 
+    //チェックアウト完了
+    CREATE_CHECKOUT_SUCCESS, 
+    CREATE_CHECKOUT_FAIL,
+    
+    //チェックアウト詳細
+    DETAIL_CHECKOUT_SUCCESS,
+    DETAIL_CHECKOUT_FAIL,
+
     //読み込み中
     SET_AUTH_LOADING, 
     REMOVE_AUTH_LOADING,
@@ -32,6 +40,7 @@ const initialState = {
     user: null, 
     isAuthenticated: null, 
     loading: false,
+    checkout_url: null,
     }
 
 const authReducer = (state = initialState, action) => {
@@ -110,6 +119,31 @@ const authReducer = (state = initialState, action) => {
                 ...state,
                 isAuthenticated: false,
                 user: null,
+            }
+
+        // チェックアウト完了
+        case CREATE_CHECKOUT_SUCCESS:
+            return {
+                ...state,
+                checkout_url: payload,
+                //user: payload.user,
+            }
+        case CREATE_CHECKOUT_FAIL:
+            return {
+                ...state,
+            }
+    
+        //チェックアウト詳細
+        case DETAIL_CHECKOUT_SUCCESS:
+            return {
+                ...state,
+                checkout_url: payload,
+                
+                user: payload.user,
+            }
+        case DETAIL_CHECKOUT_FAIL:
+            return {
+                ...state,
             }
 
         //読み込み中

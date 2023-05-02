@@ -27,6 +27,15 @@ import {
     //読み込み中
     SET_AUTH_LOADING, 
     REMOVE_AUTH_LOADING,
+
+    //チェックアウト完了
+    CREATE_CHECKOUT_SUCCESS,
+    CREATE_CHECKOUT_FAIL,
+
+    //チェックアウト詳細
+    DETAIL_CHECKOUT_SUCCESS,
+    DETAIL_CHECKOUT_FAIL,
+
 } from './types'
 
 
@@ -205,4 +214,66 @@ export const verify = () => async (dispatch) => {
     dispatch({
         type: REMOVE_AUTH_LOADING,
     })
+}
+
+
+// チェックアウト完了
+export const create_checkout = (email) => async (dispatch) => {
+    dispatch({type: SET_AUTH_LOADING,})
+
+    const body = JSON.stringify({email, })
+
+    try{
+        const res = await fetch('/api/account/create_checkout' , {
+            method: 'POST', 
+            headers: {'Content-Type': 'application/json',}, 
+            body: body,
+        })
+        
+        const data = await res.json()
+
+        if (res.status === 200) {
+            dispatch({
+                type: CREATE_CHECKOUT_SUCCESS,
+                payload: data.url,
+            })
+            dispatch(verify())
+        } else {
+            dispatch ({type: CREATE_CHECKOUT_FAIL, })
+        }
+    } catch (err) {
+        dispatch ({type: CREATE_CHECKOUT_FAIL,})
+    } 
+    dispatch({type: REMOVE_AUTH_LOADING,})
+}
+
+
+
+//チェクアウト詳細
+export const detail_checkout = (session_id) => async (dispatch) => {
+    dispatch({type: SET_AUTH_LOADING,})
+
+    const body = JSON.stringify({session_id, })
+
+    try{
+        const res = await fetch('/api/account/detail_checkout' , {
+            method: 'POST', 
+            headers: {'Content-Type': 'application/json',}, 
+            body: body,
+        })
+        
+        const data = await res.json()
+
+        if (res.status === 200) {
+            dispatch({
+                type: DETAIL_CHECKOUT_SUCCESS,
+                payload: data,
+            })
+        } else {
+            dispatch ({type: DETAIL_CHECKOUT_FAIL, })
+        }
+    } catch (err) {
+        dispatch ({type: DETAIL_CHECKOUT_FAIL,})
+    } 
+    dispatch({type: REMOVE_AUTH_LOADING,})
 }

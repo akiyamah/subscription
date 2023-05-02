@@ -9,9 +9,31 @@
 
 
 .button-yellow {
-  @apply text-center inline-block text-white bg-yellow-500 py-2 px-4 focus:outline-none hover:bg-yellow-600 rounded;
+  @apply text-center inline-block text-white bg-orange-400 py-2 px-4 focus:outline-none hover:bg-yellow-600 rounded;
 }
 
 .button-nav {
-  @apply inline-block bg-white py-2 px-4 rounded font-medium  text-gray-500 hover:bg-gray-50;
+  @apply inline-block bg-orange-400 py-2 px-4 rounded font-medium text-white hover:bg-gray-700 mx-2;
+}
+
+
+/* globals.css */
+.plan-card {
+  @apply shadow-lg rounded-lg bg-white p-6 text-center;
+}
+
+.plan-title {
+  @apply text-2xl font-bold mb-4;
+}
+
+.plan-price {
+  @apply text-xl font-semibold text-indigo-600;
+}
+
+.plan-feature {
+  @apply mt-6 mb-8 space-y-4;
+}
+
+.plan-button {
+  @apply bg-indigo-600 text-white px-6 py-2 rounded-md;
 }

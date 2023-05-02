@@ -32,6 +32,9 @@ class UserAccount (AbstractBaseUser, PermissionsMixin):
     email = models.EmailField("メールアドレス", max_length=255, unique=True)
     name = models.CharField("名前", max_length=255)
     
+    customer_id = models.CharField("顧客ID", max_length=255, blank=True, null=True) 
+    current_period_end = models.DateTimeField("有効期限", blank=True, null=True)
+    
     is_active = models.BooleanField(default=True)
     is_staff = models.BooleanField(default=False)
     
