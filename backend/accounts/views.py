@@ -6,6 +6,8 @@ from rest_framework.views import APIView
 from rest_framework.viewsets import ModelViewSet
 
 from .serializers import UserSerializer
+from datetime import datetime
+from dateutil.relativedelta import relativedelta
 
 
 User = get_user_model()
@@ -13,7 +15,7 @@ User = get_user_model()
 
 # アカウント登録
 class RegisterView(APIView):
-    permission_classes = (permissions.AllowAny, )
+    permission_classes = (permissions.AllowAny,)
     
     def post(self, request):
         print('############ RegisterView post sta')
@@ -52,7 +54,7 @@ class UserView(APIView):
         try:
             user = request.user
             print(user)
-            user = UserSerializer(user)
+            user = UserSerializer(user) 
             
             return Response(
                 {'user': user.data}, 
@@ -63,3 +65,36 @@ class UserView(APIView):
                 {'error':'ユーザーの取得に問題が発生しました UserView'},
                 status=status.HTTP_500_INTERNAL_SERVER_ERROR
             )
+
+# サブスク請求
+class SubscriptionView(APIView):
+    permission_classes = (permissions.AllowAny,)
+    
+    def post (self, request):
+        try:
+            print("SubscriptionView called ")
+            print(request.data)
+            email = request.data["email"]
+            customer_id = request.data["customer_id"]
+            created = request.data["created"]
+            user_data = User.objects.filter(customer_id=customer_id)
+            if len(user_data):
+                user_data = user_data[0]
+            else:
+                user_data = User.objects.get(email=email)
+                user_data.customer_id = customer_id
+            created = datetime.fromtimestamp(created)
+            # 有効期限は1ヶ月後を設定
+            user_data.current_period_end = created + relativedelta(months=1)
+            user_data.save()
+            
+            return Response(
+                {'success':'サブスクリプション有効期限の更新に成功しました'},
+                status=status.HTTP_200_OK
+            )
+            
+        except:
+            return Response(
+                {'error':'サブスクリプション有効期限の更新に失敗しました'},
+                status=status.HTTP_500_INTERNAL_SERVER_ERROR
+            ) 
