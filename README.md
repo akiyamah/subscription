@@ -38,7 +38,7 @@
 
 ## 構成
 
-![構成](https://github.com/akiyamah/subscription/tree/dev/docs/構成図.png "構成")
+![構成](https://github.com/akiyamah/subscription/tree/dev/docs/images/構成図.png "構成")
 
 
 
