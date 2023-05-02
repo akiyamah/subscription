@@ -37,7 +37,7 @@
 * 通知機能: 通知を受信できる。
 
 ## 構成
-![構成](https://github.com/akiyamah/subscription/blob/dev/docs/images/architect.png)
+![構成](https://github.com/akiyamah/subscription/blob/dev/docs/images/architect.png 'w')
 
 
 
