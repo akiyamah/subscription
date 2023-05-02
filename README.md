@@ -98,7 +98,7 @@ npm -v
 
 ### Next.jsインストール
 ```
-npx create-next-app . --ser-npm
+npx create-next-app . --use-npm
 ```
 
 ### 動作確認
@@ -114,20 +114,26 @@ npm install -D tailwindcss
 npx tailwindcss init
 ``` 
 
-### 状態管理,その他ライブラリインストール
+### Stripe導入
+公式: https://dashboard.stripe.com/
+API Reference: https://stripe.com/docs/api
+ja: https://stripe.com/docs/development/get-started?locale=ja-JP
+```
+npm install stripe
+```
+
+### 状態管理 ライブラリインストール
+```
+npm install react-redux
+npm install redux
+npm install redux-devtools-extension
+```
+
+### その他ライブラリインストール
 ```
 npm install cookie 
 npm install date-fns
 npm install micro
-npm install micro-micrs 
+npm install micro-cros
 npm install react-loader-spinner
-npm install react-redux
-npm install redux
-npm install redux-devtools-extension
-
-date-fns micro micro-micrs react-loader-spinner react-redux redux redux-devtools-extension redux-thunk stripe
 ```
-
-Next.jsはReactベースのWebアプリケーションフレームワーク。  
-アプリケーションの状態管理にはReduxを使用する。  
-TailwindCSSはユーティリティクラスを活用したCSSフレームワーク。
