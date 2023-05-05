@@ -29,7 +29,7 @@ const Result = () => {
 
         {session_id && (
             <div className='text-center'>
-                <div className='test-2x1 mb-3'>{checkout_detail && checkout_detail.customer.name }様</div>
+                { /* <div className='test-2x1 mb-3'>{checkout_detail && checkout_detail.customer.name }様</div> */}
                 <div className='test-2x1'>決済が完了しました</div>
             </div>
         )}

@@ -139,4 +139,7 @@ npm install date-fns
 npm install micro
 npm install micro-cros
 npm install react-loader-spinner
+npm install react-datepicker
+npm install next-connect
+$ npm install cropperjs
 ```

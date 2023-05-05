@@ -248,7 +248,6 @@ export const create_checkout = (email) => async (dispatch) => {
 }
 
 
-
 //チェクアウト詳細
 export const detail_checkout = (session_id) => async (dispatch) => {
     dispatch({type: SET_AUTH_LOADING,})
@@ -277,3 +276,5 @@ export const detail_checkout = (session_id) => async (dispatch) => {
     } 
     dispatch({type: REMOVE_AUTH_LOADING,})
 }
+
+

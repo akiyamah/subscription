@@ -7,17 +7,24 @@
   @apply w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-yellow-500 focus:bg-transparent focus:ring-2 focus:ring-yellow-300 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out;
 }
 
+.button-indigo {
+@apply inline-block bg-indigo-600 py-2 px-4 rounded-md font-medium text-white hover:bg-yellow-600 mx-2 ;
+  
+}
 
 .button-yellow {
   @apply text-center inline-block text-white bg-orange-400 py-2 px-4 focus:outline-none hover:bg-yellow-600 rounded;
 }
 
 .button-nav {
-  @apply inline-block bg-orange-400 py-2 px-4 rounded font-medium text-white hover:bg-gray-700 mx-2;
+  @apply inline-block bg-indigo-600 py-2 px-4 rounded-md font-medium text-white hover:bg-yellow-600 mx-2 ;
+  
 }
 
+.auth-card{
+  @apply items-center p-4 bg-gray-200 rounded-lg shadow-md w-full ;
+}
 
-/* globals.css */
 .plan-card {
   @apply shadow-lg rounded-lg bg-white p-6 text-center;
 }
@@ -35,5 +42,25 @@
 }
 
 .plan-button {
-  @apply bg-indigo-600 text-white px-6 py-2 rounded-md;
+  @apply bg-indigo-600 text-white px-6 py-2 rounded-md hover:bg-yellow-600;
+}
+
+.feature-card {
+  @apply flex items-center p-4 bg-white rounded-lg shadow-md;
+}
+
+.feature-icon {
+  @apply flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white ;
+}
+
+.feature-text {
+  @apply ml-4;
+}
+
+.feature-title {
+  @apply text-lg font-medium;
+}
+
+.feature-description {
+  @apply mt-2 text-gray-500;
 }

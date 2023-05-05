@@ -1,9 +1,10 @@
 import { useEffect } from 'react' 
 import { useDispatch } from 'react-redux' 
-//import { refresh } from '../actions/auth'
+import { refresh } from '../actions/auth'
 
 import Head from 'next/head' 
 import Navigation from './Navigation'
+import Footer from './Footer'
 
 
 const Layout = (props) => {
@@ -15,6 +16,7 @@ return (
         </Head>
         <Navigation />
         <div className="max-w-7x1 mx-auto px-8 py-6">{props.children}</div>
+        <Footer />
     </>
 
 )

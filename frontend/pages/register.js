@@ -44,59 +44,55 @@ const Register = () => {
                 <title>FINE | アカウント登録</title>
             </Head>
 
-            <div className="text-center text-2xl mb-5">アカウント登録</div>
-
-            <form className="w-1/3 mx-auto" onSubmit={onSubmit}>
-
-                <div className="mb-4">
-                    <div className="mb-1" htmlFor= "name">名前</div> 
-                    <input
-                        className="input-form" 
-                        type="text" 
-                        name="name"
-                        placeholder="username"
-                        onChange={onChange} 
-                        value={name} 
-                        required
-                    />
-                </div>
-
-                <div className="mb-4">
-                    <div className="mb-1" htmlFor= "email">メールアドレス</div> 
-                    <input
-                        className="input-form" 
-                        type="email" 
-                        name="email"
-                        placeholder="xxx@xxx.com" 
-                        onChange={onChange} 
-                        value={email} 
-                        required
-                    />
-                </div>
-
-                <div className="mb-4">
-                    <div className="mb-1" htmlFor= "password">パスワード</div> 
-                    <input
-                        className="input-form" 
-                        type="password" 
-                        name="password"
-                        placeholder="半角英数8文字以上"
-                        onChange={onChange} 
-                        value={password} 
-                        required
-                    />
-                </div>
-
-                <div className="flex justify-center">
-                    {loading ? (
-                        <Oval color="#F59E00" width={50} heigh={50} />
-                    ) : (
-                        <button className="button-yellow" type="submit">送信</button>
-                    )
-                    }
-                </div>
-
-            </form>
+            <div className="auth-card mx-auto">
+                <div className="text-center text-2xl mb-5">アカウント登録</div>
+                <form className="w-1/3 mx-auto" onSubmit={onSubmit}>
+                    <div className="mb-4">
+                        <div className="mb-1" htmlFor= "name">名前</div> 
+                        <input
+                            className="input-form" 
+                            type="text" 
+                            name="name"
+                            placeholder="username"
+                            onChange={onChange} 
+                            value={name} 
+                            required
+                        />
+                    </div>
+                    <div className="mb-4">
+                        <div className="mb-1" htmlFor= "email">メールアドレス</div> 
+                        <input
+                            className="input-form" 
+                            type="email" 
+                            name="email"
+                            placeholder="xxx@xxx.com" 
+                            onChange={onChange} 
+                            value={email} 
+                            required
+                        />
+                    </div>
+                    <div className="mb-4">
+                        <div className="mb-1" htmlFor= "password">パスワード</div> 
+                        <input
+                            className="input-form" 
+                            type="password" 
+                            name="password"
+                            placeholder="半角英数8文字以上"
+                            onChange={onChange} 
+                            value={password} 
+                            required
+                        />
+                    </div>
+                    <div className="flex justify-center">
+                        {loading ? (
+                            <Oval color="#F59E00" width={50} heigh={50} />
+                        ) : (
+                            <button className="button-indigo" type="submit">送信</button>
+                        )
+                        }
+                    </div>
+                </form>
+            </div>
         </>
     )
 }

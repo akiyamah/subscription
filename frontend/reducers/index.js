@@ -1,6 +1,12 @@
-import { combineReducers } from 'redux' 
-import authReducer from './auth'
+// reducers/index.js
 
-export default combineReducers ({
-    auth: authReducer, 
-})
+import { combineReducers } from 'redux';
+import authReducer from './auth';
+import profile from './userProfile';
+// 他のreducerがあればここにインポート
+
+export default combineReducers({
+  auth: authReducer,
+  profile,
+  // 他のreducerがあればここに追加
+});
